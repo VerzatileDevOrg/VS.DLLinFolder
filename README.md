@@ -1,5 +1,5 @@
 # VS.DLLinFolder
- An Example how to Include DLL Files in a folder and send it to the Debug or build worlder from it to generate a working build directory.
+ An Example how to Include DLL Files in a folder and send it to the Debug or build folder from it to generate a working build directory.
 
 
 1.  Add some kind of library or something that requires general .dll files that are not usually available on an avarage computer.
