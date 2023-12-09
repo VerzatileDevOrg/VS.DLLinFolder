@@ -33,7 +33,7 @@ int main(int args, char* argv[])
     /// This will copy all the DLLs from the DLLs folder to the Debug folder, so it can run without any problems.
     
 
-    /* HERE IS AN EXAMPLE OF THE SFML USE CASE And Coping DLL Files */
+    /* HERE IS AN EXAMPLE OF THE SFML USE CASE To show the working example */
 
     // Create an SFML window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
