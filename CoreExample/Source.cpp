@@ -15,12 +15,17 @@ int main(int args, char* argv[])
 
     /// <summary>
     /// To include DLLs in the Debug or to make sure it runs you need to:
-    /// 1. Configuration Properties -> Debugging -> Working Directory -> DLLs 
-    /// 2. VC++ Directories -> Reference Directories -> $(ProjectDir)DLLs;$(ReferencePath)
+    /// 
+    /// 1. Create a Folder called DLLs in the root of the project
+    /// 
+    /// 2. Configuration Properties -> Debugging -> Environment -> PATH=$(ProjectDir)\DLLs
+    /// Note - Specify more paths by ";" separating them as example: " PATH=$(ProjectDir)\DLLs;$(ProjectDir)\DLLs2;$(ProjectDir)\DLLs3 "
+    /// Alternativly you can specify " Working Directory " to start from the "DLLs" folder
+    /// 
     /// 3. Configuration Properties -> Linker -> General -> Additional Library Directories -> 
     /// $(SolutionDir)\lib;%(AdditionalLibraryDirectories)
-    /// 4. Configuration Properties -> Linker -> Input ->
     /// 
+    /// 4. Configuration Properties -> Linker -> Input ->
     /// lib sfml-system-d.lib, 
     /// sfml - window - d.lib,
     /// sfml - graphics - d.lib, 
@@ -29,8 +34,9 @@ int main(int args, char* argv[])
     /// 
     /// "Additional dependencies -> include " This here States to Look into the folder of Include and its contents"
     /// This tells the compiler how to include the directories of Include and link it to the project Make sure, you include all .lib endings of the Library that are required.
-    
-    /// 6. Last Linking DLLs from the Folder to Debug Folder
+    ///
+    /// --Optional--
+    /// 5. Last Linking DLLs from the Folder to Debug Folder
     /// Configuration Properties -> Build Events -> Pre-link Event -> Command Line -> copy "$(ProjectDir)DLLs\*.dll" "$(TargetDir)"ping - n 6 127.0.0.1 > nul
     /// This will copy all the DLLs from the DLLs folder to the Debug folder directly, to the root of the debug folder.
 
