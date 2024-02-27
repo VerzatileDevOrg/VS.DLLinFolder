@@ -2,6 +2,8 @@
 
 #### Including DLL Files in a Visual Studio Project
 
+Read the full documentation [Here](https://verzatiledevorg.github.io/Programming_HandBook/docs/IDE/VisualStudio/IncludeDLLs.html).
+
 ## Introduction:
 This guide demonstrates how to include DLL files in a folder and seamlessly integrate them into the Debug or Build folder to generate a working build directory. It is particularly useful when dealing with libraries that require specific DLL files.
 
